@@ -71,7 +71,7 @@ void main() {
       // Stuff the captured data in a buffer-object
       if (!bufferQueue.empty()) { // We just drop the data if no buffers are available
         myBuff = bufferQueue.front(); 
-        bufferQueue.popFront();
+        bufferQueue[].popFront();
         alBufferData(myBuff, AL_FORMAT_MONO16, cast(void *) buffer, CAP_SIZE * short.sizeof, FREQ);
 
         // Queue the buffer
