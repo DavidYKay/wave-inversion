@@ -29,7 +29,7 @@ void main() {
   alcCaptureStart(inputDevice); // Begin capturing
   errorCode = alcGetError(inputDevice);
 
-  alGenBuffers(16,&helloBuffer[0]); // Create some buffer-objects
+  alGenBuffers(16, &helloBuffer[0]); // Create some buffer-objects
   errorCode = alGetError();
 
   // Queue our buffers onto an STL list
@@ -65,7 +65,8 @@ void main() {
 
       //***** Process/filter captured data here *****//
       //for (int ii=0;ii<CAP_SIZE;++ii) {
-      //  buffer[ii]*=0.1; // Make it quieter
+      //  buffer[ii]*= cast(short) 0.1; // Make it quieter
+      //  //buffer[ii]*=-1; // invert it
       //}
 
       // Stuff the captured data in a buffer-object
