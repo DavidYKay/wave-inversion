@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+mic.so
+mic.dylib
+mic.dll
+mic.a
+mic.lib
+mic-test-*
+*.exe
+*.o
+*.obj
+*.lst
+mic

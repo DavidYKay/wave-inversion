@@ -1,0 +1,6 @@
+name "mic"
+description "Experimenting with microphone capture"
+authors "Gargoyle Software Ltd"
+copyright "Copyright © 2018, Gargoyle Software Ltd"
+license "proprietary"
+dependency "derelict-al" version="~>2.0.0-beta.2"
