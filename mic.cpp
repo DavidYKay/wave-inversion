@@ -59,9 +59,11 @@ int main(int argC,char* argV[])
             alcCaptureSamples(inputDevice,buffer,CAP_SIZE);
 
             //***** Process/filter captured data here *****//
-            //for (int ii=0;ii<CAP_SIZE;++ii) {
-            //  buffer[ii]*=0.1; // Make it quieter
-            //}
+            for (int ii=0;ii<CAP_SIZE;++ii) {
+              //buffer[ii]*=0.1; // Make it quieter
+              //buffer[ii]*=2; // Make it quieter
+              buffer[ii]*=-2; // invert the wave
+            }
 
             // Stuff the captured data in a buffer-object
             if (!bufferQueue.empty()) { // We just drop the data if no buffers are available
